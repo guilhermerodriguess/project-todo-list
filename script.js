@@ -1,6 +1,8 @@
 // No campo de input será digitado o texto de uma tarefa qualquer e, em seguida, clicar-se-á no botão de criar tarefa. Será verificado que, após o clique, o texto digitado aparece na lista e desaparece do input.
 
 var acessButton = document.getElementById('criar-tarefa')
+var acessButtonClearAll = document.getElementById('apaga-tudo')
+var acessButtonClear = document.getElementById('remover-finalizados')
 var acessOl = document.getElementById('lista-tarefas')
 
 
@@ -38,5 +40,27 @@ function complete (origem) {
   }
   else {
     origem.target.classList.add('completed')
+  }
+}
+
+acessButtonClearAll.addEventListener('click', apagaTudo)
+
+function apagaTudo () {
+  let acessLi = document.querySelectorAll('li')
+
+  for (i = 0; i < acessLi.length; i ++) {
+    acessLi[i].remove()
+  }
+}
+
+acessButtonClear.addEventListener('click', apaga)
+
+function apaga () {
+  let acessLi = document.querySelectorAll('li')
+
+  for (i = 0; i < acessLi.length; i ++) {
+    if (acessLi[i].classList.contains('completed')) {
+      acessLi[i].remove()
+    }
   }
 }
