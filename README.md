@@ -19,13 +19,13 @@ To start using the To-Do List project, follow the steps below:
 1. Clone the repository using the following command in your terminal:
 
    ```
-   git clone git@github.com:your-user/todo-list.git
+   git clone git@github.com:guilhermerodriguess/project-todo-list
    ```
 
 2. Access the project directory:
 
    ```
-   cd todo-list
+   cd project-todo-list
    ```
 
 3. Open the `index.html` file in your preferred browser.
